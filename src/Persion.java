@@ -2,30 +2,20 @@ public class Persion {
     String name;
     int age;
     String gender;
-int sum(int a,int b){
-    return a+b;
+    Persion(){};
+    Persion(String name,int age){
+        this(name,age,null);//利用下面这个完整的函数及逆行构造
+    }
+Persion(String name,int age,String gender){//这是个构造方法
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    System.out.println("我是一个函数");
+    name="小明";
+    age=18;
 }
-double sum(double a,double b){//和
-    return a+b;
-}
-//-----------------------------------------------
 void hello(){
-    System.out.println("你好");
+    System.out.println("我是"+name+"年龄"+age+"性别"+gender);
 }
-void goodbye(){
-        System.out.println("再见");
-    }
-    void play(){
-        System.out.println("玩耍");
-    }
-    void test() {
-        hello();
-        goodbye();
-        play();
-    }//函数的互相调用
-    int test1(int n){
-    if(n==0) return 0;
-    return test1(n-1)+n;
-    }//函数的递归
-//--------------------------------
+
 }
