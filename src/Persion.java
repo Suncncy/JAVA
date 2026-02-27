@@ -2,22 +2,30 @@ public class Persion {
     String name;
     int age;
     String gender;
-void hello(){
-    System.out.println("我叫"+name+"今年"+age+"岁了");
-    }
-int sum(int a,int b) {
-    int c=a+b;
-    return c;//在if-else语句中也要用return返回
-    }
-void swap(int c,int d){
-    int temp=c;
-    c=d;
-    d=temp;
-    }
-void modify(Persion persion){
-    persion.name="hhhh";
-    }
-void setName(String name){
-    this.name=name;//this指向对象的值
+int sum(int a,int b){
+    return a+b;
 }
+double sum(double a,double b){//和
+    return a+b;
+}
+//-----------------------------------------------
+void hello(){
+    System.out.println("你好");
+}
+void goodbye(){
+        System.out.println("再见");
+    }
+    void play(){
+        System.out.println("玩耍");
+    }
+    void test() {
+        hello();
+        goodbye();
+        play();
+    }//函数的互相调用
+    int test1(int n){
+    if(n==0) return 0;
+    return test1(n-1)+n;
+    }//函数的递归
+//--------------------------------
 }
