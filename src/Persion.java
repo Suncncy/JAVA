@@ -15,6 +15,7 @@ Persion(String name,int age,String gender){//这是个构造方法
     age=18;
 }
 void hello(){
+
     System.out.println("我是"+name+"年龄"+age+"性别"+gender);
 }
 
