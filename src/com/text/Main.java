@@ -5,29 +5,23 @@ import entity.Person;
 import entity.Student;
 import entity.Teacher;
 public class Main{
+
+
     public static void main(String[] args){
-Student student=new Student();
-Student student1=student;
-System.out.println(student.toString());//包名+名称+16进制的存放的内存地址
-System.out.println(student.equals(student1));//equals进行判断两个对象是否相等
+        Person p1=new Person("小明",18,"男");
+        Person p2=new Person("小明",18,"男");
+        Person p3=new Person();
+        Student s1=new Student();
 
-test(student);
-//student.hello();
-//student.study();
-//Teacher teacher=new Teacher();
-//teacher.teach();
-//teacher.hello();
-//Person p=new Student();//将子类换成父类
-//Student s=(Student) p;//再将p强制转换成子类
-
-    }
-    private static void test(Person p){
-if(p instanceof Student student){
-//    Student s=(Student)p;//将父类的person转换成子类的
-student.study();
-}else if(p instanceof Teacher){
-    Teacher t=(Teacher)p;
-    t.teach();
-}
+//Student student=new Student();
+//
+//Person person=student;
+//System.out.println(student.name);
+//System.out.println(person.name);
+//如果我们去取类中的变量，看的是编译时类型；如果我们去用类中的方法，看的是运行的类型
+        p3.test();//父类用父类的静态方法
+        s1.test();//子类用子类的静态方法；二者互不影响
+System.out.println(p2==p1);
+System.out.println(p2.equals(p1));
     }
 }
