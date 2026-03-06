@@ -1,6 +1,6 @@
 package entity;
 
-public class Person {
+public class Person{//默认继承object类
      String name;
      int age;
      String gender;
