@@ -1,7 +1,15 @@
 package entity;
 
 public class Student extends Person implements Study{
+ private Status status;
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     public void study(){
         System.out.println("我是"+ super.name+"学习Java");
