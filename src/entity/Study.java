@@ -1,6 +1,6 @@
 package entity;
 
-public interface Study {//接口与接口之间可以实现继承
+public sealed interface Study permits Student, Teacher {//接口与接口之间可以实现继承
   int a=10;//只能是public，final和static类型的
   static void test(){
 

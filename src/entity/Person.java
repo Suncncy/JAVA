@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Objects;
 
-public abstract class Person{//默认继承object类
+public sealed abstract class Person permits Student, Teacher {//默认继承object类
      protected String name;
      protected int age;
      protected String gender;

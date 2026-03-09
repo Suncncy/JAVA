@@ -1,6 +1,6 @@
 package entity;
 
-public class Student extends Person implements Study{
+public final class Student extends Person implements Study{
  private Status status;
 
     public Status getStatus() {
