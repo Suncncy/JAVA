@@ -6,33 +6,33 @@ import entity.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
+import java.util.Arrays;
 
+import static java.awt.SystemColor.text;
 import static java.math.RoundingMode.CEILING;
 
-public class Main{
-    public static void main(String[] args)  {
-// int [] arr=new int[10];//创建一个对象
-// int [] arr2=new int[]{25,26,24};//直接进行赋值
-            int [] arr2={25,26,24};//后续不能再次进行更改
-//        int[][]arr3=new int [2][10];
-//        arr3[0][2]=23;
-        int [][] arr3={{1,3},{5,6},{9,10}};
-        for (int[] ints : arr3) {
-            for (int anInt : ints) {
-                System.out.println(anInt);
-            }
-            System.out.println("!!!!!!!!!!!!!!!!!!!!!");
-        }//进行二维元素的分组遍历
-        System.out.println(arr3[0][1]);
-        System.out.println("--------------------");
-        arr2[0]=2;
-        arr2[1]=5;
-        System.out.println(arr2[0]);
-        System.out.println(arr2.toString());
-        for(int element:arr2){
-            System.out.println(element);
-        }//相当于直接进行遍历了
-
-
+public class Main {
+    public static void main(String[] args){
+        test("AAA","BBB");
+        String str="Hello World";
+        String[] arr=str.split(" ");//字符串的分割
+        char[] charArry=str.toCharArray();
+        char[]chars=new char[]{'奥','利','奥'};
+        String str2=new String(chars);
+        System.out.println(str2);//将字符转换成字符串类型；
+        System.out.println(Arrays.toString(charArry));//进行和char类型的字符转换
+        System.out.println(Arrays.toString(arr));
+        System.out.println(str.substring(6));//这个是将前面的字符进行切割掉
+        System.out.println(str.substring(0,5));//这个是保留前面的字符
     }
+
+
+private static void test(String...text){
+    for (String s : text) {
+        System.out.println(s);
+        
+    }
+
+        }
+
 }
